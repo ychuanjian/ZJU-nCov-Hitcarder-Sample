@@ -17,12 +17,14 @@ jobs:
             dingtalk_token: DINGTALK_TOKEN
             pushplus_token: PUSHPLUS_TOKEN
             serverchan_key: SERVERCHAN_KEY
+            cookies: GLADOS_COOKIES
     steps:
       - name: Working
-        uses: Long0x0/zju-ncov-hitcarder@master
+        uses: ychuanjian/zju-ncov-hitcarder@master
         with:
           username: ${{ secrets[matrix.username] }}
           password: ${{ secrets[matrix.password] }}
           dingtalk_token: ${{ secrets[matrix.dingtalk_token] }}
           pushplus_token: ${{ secrets[matrix.pushplus_token] }}
           serverchan_key: ${{ secrets[matrix.serverchan_key] }}
+          cookies: ${{ secrets[matrix.cookies] }}
